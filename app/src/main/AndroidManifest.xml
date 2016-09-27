@@ -35,6 +35,11 @@
             android:screenOrientation="portrait"
             android:label="Activity Basic"
             />
+        <activity
+            android:name=".ui.activity.OnDestroyActivity"
+            android:screenOrientation="portrait"
+            android:label="Activity Basic"
+            />
     </application>
 
 </manifest>

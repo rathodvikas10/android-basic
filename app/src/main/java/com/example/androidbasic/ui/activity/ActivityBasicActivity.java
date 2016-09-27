@@ -17,14 +17,19 @@ public class ActivityBasicActivity extends BaseActivity {
     private String LOG_TAG = "ACTIVITY_BASIC";
     private Button showActivity;
     private Button showDialog;
+    private Button showExternalDialog;
+    private Button finishActivity;
+    private Button onDestroy;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_activity_basic);
         this.showDialog = (Button) findViewById(R.id.show_dialog);
         this.showActivity = (Button) findViewById(R.id.show_activity);
+        this.showExternalDialog = (Button) findViewById(R.id.show_external_dialog);
+        this.finishActivity = (Button) findViewById(R.id.finish);
+        this.onDestroy = (Button) findViewById(R.id.on_destroy);
 
         showDialog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +42,33 @@ public class ActivityBasicActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ActivityBasicActivity.this,OpenActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        showExternalDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "Here is the share content body";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+            }
+        });
+
+        finishActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        onDestroy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityBasicActivity.this,OnDestroyActivity.class);
                 startActivity(intent);
             }
         });

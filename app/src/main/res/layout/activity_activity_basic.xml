@@ -17,4 +17,22 @@
         android:layout_height="wrap_content"
         android:text="Show Dialog"
         />
+    <Button
+        android:id="@+id/show_external_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show External Dialog"
+        />
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish Activity"
+        />
+    <Button
+        android:id="@+id/on_destroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="onDestroy Directly"
+        />
 </LinearLayout>

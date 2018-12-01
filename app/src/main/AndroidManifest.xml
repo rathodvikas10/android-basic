@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androidbasic">
+    package="in.vikasrathod.androidbasic">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name="in.vikasrathod.androidbasic.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,24 +19,24 @@
         </activity>
 
         <activity
-            android:name=".ui.activity.HomeActivity"
+            android:name="in.vikasrathod.androidbasic.ui.activity.HomeActivity"
             android:screenOrientation="portrait"
             android:label="Android Basic"
             />
 
         <activity
-            android:name=".ui.activity.ActivityBasicActivity"
+            android:name="in.vikasrathod.androidbasic.ui.activity.ActivityBasicActivity"
             android:screenOrientation="portrait"
             android:label="Activity Basic"
             />
 
         <activity
-            android:name=".ui.activity.OpenActivity"
+            android:name="in.vikasrathod.androidbasic.ui.activity.OpenActivity"
             android:screenOrientation="portrait"
             android:label="Activity Basic"
             />
         <activity
-            android:name=".ui.activity.OnDestroyActivity"
+            android:name="in.vikasrathod.androidbasic.ui.activity.OnDestroyActivity"
             android:screenOrientation="portrait"
             android:label="Activity Basic"
             />

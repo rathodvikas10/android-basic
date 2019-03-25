@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,13 +14,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:text="Toast Gravity"
-        android:textSize="@dimen/text_heading"
-        android:textStyle="bold"
+        android:text="@string/toast_gravity"
+        style="@style/Text.Heading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <CheckBox
         android:id="@+id/left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         android:text="Left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-    <Button
+    <CheckBox
         android:id="@+id/right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         android:text="Right"
         app:layout_constraintLeft_toRightOf="@id/left"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-    <Button
+    <CheckBox
         android:id="@+id/top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
         android:text="Top"
         app:layout_constraintLeft_toRightOf="@+id/right"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-    <Button
+    <CheckBox
         android:id="@+id/bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,18 +60,28 @@
         app:layout_constraintLeft_toRightOf="@+id/top"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/show_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toast with offset"
+        android:text="Show Toast"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/left"
-        android:textSize="@dimen/text_heading"
-        style="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintTop_toBottomOf="@+id/left"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toast_with_offset"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_toast"
+        style="@style/Text.Heading"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

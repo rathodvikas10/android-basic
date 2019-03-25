@@ -14,4 +14,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Text.Heading" parent="android:Widget.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_heading</item>
+    </style>
+
 </resources>

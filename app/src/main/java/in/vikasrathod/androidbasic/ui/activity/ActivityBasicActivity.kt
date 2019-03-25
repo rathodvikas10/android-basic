@@ -1,11 +1,11 @@
 package `in`.vikasrathod.androidbasic.ui.activity
 
+import `in`.vikasrathod.androidbasic.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-
-import `in`.vikasrathod.androidbasic.R
+import android.widget.TextView
 
 /**
  * Created by vikas on 26/9/16.
@@ -28,6 +28,10 @@ class ActivityBasicActivity : BaseActivity() {
         this.showExternalDialog = findViewById<View>(R.id.show_external_dialog) as Button
         this.finishActivity = findViewById<View>(R.id.finish) as Button
         this.onDestroy = findViewById<View>(R.id.on_destroy) as Button
+        findViewById<TextView>(R.id.toast_activity).setOnClickListener {
+            val intent = Intent(this,ToastActivity::class.java)
+            startActivity(intent)
+        }
 
         showDialog!!.setOnClickListener { showDialog() }
 

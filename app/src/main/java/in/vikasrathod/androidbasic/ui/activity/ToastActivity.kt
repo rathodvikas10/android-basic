@@ -11,12 +11,14 @@ class ToastActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_toast)
-        findViewById<TextView>(R.id.left).setOnClickListener {
+
+        findViewById<TextView>(R.id.show_toast).setOnClickListener {
             val text = "Hello toast!"
             val duration = Toast.LENGTH_SHORT
             val toast = Toast.makeText(applicationContext, text, duration)
-            toast.setGravity(Gravity.TOP or Gravity.LEFT, 100, 100)
+            toast.setGravity(Gravity.TOP or Gravity.BOTTOM or Gravity.RIGHT or Gravity.LEFT, 0, 0)
             toast.show()
         }
     }

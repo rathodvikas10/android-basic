@@ -3,4 +3,11 @@
     <string name="toast_gravity">Toast Gravity</string>
     <string name="toast_with_offset">Toast with offset</string>
     <string name="toast">Toast</string>
+    <string name="offset_x">offset X</string>
+    <string name="offset_y">offset y</string>
+    <string name="show_toast">Show Toast</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
 </resources>

@@ -10,7 +10,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.activity.SplashActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,25 +18,23 @@
         </activity>
         <activity
             android:name=".ui.activity.HomeActivity"
-            android:label="Android Basic"
-            android:screenOrientation="portrait" />
+            android:label="Android Basic"/>
         <activity
             android:name=".ui.activity.ActivityBasicActivity"
-            android:label="Activity Basic"
-            android:screenOrientation="portrait" />
+            android:label="Activity Basic" />
         <activity
-            android:name=".ui.activity.OpenActivity"
-            android:label="Activity Basic"
-            android:screenOrientation="portrait" />
+            android:name=".ui.activity.LifeCycleAActivity"
+            android:label="Activity Lifecycle" />
+        <activity
+            android:name=".ui.activity.LifeCycleBActivity"
+            android:theme="@style/AppTheme.Dialog"
+            android:label="Activity Lifecycle"/>
         <activity
             android:name=".ui.activity.OnDestroyActivity"
-            android:label="Activity Basic"
-            android:screenOrientation="portrait" />
+            android:label="Activity Basic"/>
         <activity
             android:name=".ui.activity.ToastActivity"
-            android:label="@string/toast"
-            android:screenOrientation="portrait"
-            />
+            android:label="@string/toast" />
     </application>
 
 </manifest>

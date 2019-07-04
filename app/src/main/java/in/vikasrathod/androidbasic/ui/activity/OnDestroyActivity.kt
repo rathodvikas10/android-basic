@@ -1,7 +1,6 @@
 package `in`.vikasrathod.androidbasic.ui.activity
 
 import android.os.Bundle
-import `in`.vikasrathod.androidbasic.ui.activity.BaseActivity
 
 /**
  * Created by vikas on 27/9/16.
@@ -11,8 +10,9 @@ class OnDestroyActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setLogTag("__")
         finish()
-        printLog("onStart")
+        printLog("onCreate")
     }
 
     override fun onStart() {

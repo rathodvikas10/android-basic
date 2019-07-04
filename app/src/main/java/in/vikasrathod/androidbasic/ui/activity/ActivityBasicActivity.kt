@@ -36,7 +36,7 @@ class ActivityBasicActivity : BaseActivity() {
         showDialog!!.setOnClickListener { showDialog() }
 
         showActivity!!.setOnClickListener {
-            val intent = Intent(this@ActivityBasicActivity, OpenActivity::class.java)
+            val intent = Intent(this@ActivityBasicActivity, LifeCycleAActivity::class.java)
             startActivity(intent)
         }
 

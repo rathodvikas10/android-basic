@@ -60,17 +60,6 @@
         app:layout_constraintLeft_toRightOf="@+id/top"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/show_toast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Toast"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/left"/>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -80,8 +69,51 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show_toast"
+        app:layout_constraintTop_toBottomOf="@+id/bottom"
         style="@style/Text.Heading"
         />
+    <EditText
+        android:id="@+id/offset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Offset"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_margin="8dp"
+        android:inputType="number"
+        android:maxLength="3"
+        />
+
+    <Button
+        android:id="@+id/show_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Toast"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offset"/>
+
+    <Button
+        android:id="@+id/custom_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Toast"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/show_toast"
+        app:layout_constraintTop_toBottomOf="@+id/offset"/>
+
+    <Button
+        android:id="@+id/snackbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Snackbar"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_toast"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

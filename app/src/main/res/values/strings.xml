@@ -10,4 +10,5 @@
     <string name="right">Right</string>
     <string name="top">Top</string>
     <string name="bottom">Bottom</string>
+    <string name="title_activity_life_cycle_b">LifeCycleBActivity</string>
 </resources>

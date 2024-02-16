@@ -5,8 +5,7 @@ import `in`.vikasrathod.androidbasic.ui.common.BaseActivity
 import `in`.vikasrathod.androidbasic.ui.toast.ToastActivity
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import kotlinx.android.synthetic.main.activity_life_cycle_b.*
+import `in`.vikasrathod.androidbasic.databinding.ActivityLifeCycleBBinding
 
 class BActivity : BaseActivity() {
 
@@ -14,12 +13,14 @@ class BActivity : BaseActivity() {
         setLogTag("__B")
     }
 
+    private lateinit var binding : ActivityLifeCycleBBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityLifeCycleBBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setContentView(R.layout.activity_life_cycle_b)
-
-        new_activity.setOnClickListener {
+        binding.newActivity.setOnClickListener {
             var intent = Intent(this, ToastActivity::class.java)
             startActivity(intent)
         }

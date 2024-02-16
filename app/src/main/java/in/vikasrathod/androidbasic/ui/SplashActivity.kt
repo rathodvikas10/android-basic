@@ -1,10 +1,7 @@
 package `in`.vikasrathod.androidbasic.ui
 
 import `in`.vikasrathod.androidbasic.R
-import `in`.vikasrathod.androidbasic.ui.activityLaunchMode.AActivity
 import `in`.vikasrathod.androidbasic.ui.common.BaseActivity
-import `in`.vikasrathod.androidbasic.ui.fragmentLifecycle.FragmentTransactionActivity
-import `in`.vikasrathod.androidbasic.ui.fragmentLifecycle.XMLFragmentActivity
 import `in`.vikasrathod.androidbasic.ui.notificaction.NotificationActivity
 import android.content.Intent
 import android.os.Bundle

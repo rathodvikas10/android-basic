@@ -1,13 +1,11 @@
 package `in`.vikasrathod.androidbasic.ui.notificaction
 
-import `in`.vikasrathod.androidbasic.R
 import `in`.vikasrathod.androidbasic.ui.common.BaseActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_notification.*
-
+import `in`.vikasrathod.androidbasic.databinding.ActivityNotificationBinding
 
 class NotificationActivity : BaseActivity() {
-
+    private lateinit var binding: ActivityNotificationBinding
     init {
         setLogTag("__N")
     }
@@ -16,19 +14,20 @@ class NotificationActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notification)
+        binding = ActivityNotificationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         mNotificationManager = NotificationManager(this)
 
-        register_channel.setOnClickListener {
+        binding.registerChannel.setOnClickListener {
             mNotificationManager.createNotificationChannel()
         }
 
-        delete_channel.setOnClickListener {
+        binding.deleteChannel.setOnClickListener {
             mNotificationManager.deleteNotificationChannel()
         }
 
-        basic_notification.setOnClickListener {
+        binding.basicNotification.setOnClickListener {
             mNotificationManager.actionNotification()
         }
     }

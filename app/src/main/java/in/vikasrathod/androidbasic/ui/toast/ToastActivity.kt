@@ -8,15 +8,20 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_toast.*
+import `in`.vikasrathod.androidbasic.databinding.ActivityToastBinding
 
 class ToastActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityToastBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_toast)
 
-        findViewById<TextView>(R.id.left).setOnClickListener {
+        binding = ActivityToastBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+        binding.left.setOnClickListener {
             val text = "Hello toast!"
             val duration = Toast.LENGTH_SHORT
             val toast = Toast.makeText(applicationContext, text, duration)
@@ -24,7 +29,7 @@ class ToastActivity : AppCompatActivity() {
             toast.show()
         }
 
-        custom_toast.setOnClickListener {
+        binding.customToast.setOnClickListener {
             val inflater = layoutInflater
             val layout: ViewGroup = inflater.inflate(R.layout.custom_toast, null) as ViewGroup
             val text: TextView = layout.findViewById(R.id.text)
@@ -32,12 +37,12 @@ class ToastActivity : AppCompatActivity() {
             with (Toast(applicationContext)) {
                 setGravity(Gravity.CENTER_VERTICAL, 0, 0)
                 duration = Toast.LENGTH_LONG
-                view = layout
+                this.view = layout
                 show()
             }
         }
 
-        snackbar.setOnClickListener {
+        binding.snackbar.setOnClickListener {
             Snackbar.make(it,"Snackbar Text",Snackbar.LENGTH_SHORT).setAction("Action") {
                 Toast.makeText(applicationContext, "Action Performed", Toast.LENGTH_SHORT).show()
             }.addCallback(object : Snackbar.Callback() {

@@ -3,9 +3,9 @@ package `in`.vikasrathod.androidbasic.ui.activityLifecycle
 import `in`.vikasrathod.androidbasic.ui.common.BaseActivity
 import `in`.vikasrathod.androidbasic.ui.common.CustomDialogFragment
 import `in`.vikasrathod.androidbasic.ui.common.DialogActivity
+import `in`.vikasrathod.androidbasic.databinding.ActivityLifecycleABinding
 import android.content.Intent
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_lifecycle_a.*
 
 
 /**
@@ -19,27 +19,28 @@ class AActivity : BaseActivity() {
     }
 
     private var mStackLevel = 0
+    private lateinit var binding: ActivityLifecycleABinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityLifecycleABinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setContentView(`in`.vikasrathod.androidbasic.R.layout.activity_lifecycle_a)
-
-        start_activity.setOnClickListener {
+        binding.startActivity.setOnClickListener {
             val intent = Intent(this@AActivity, BActivity::class.java)
             startActivityForResult(intent,1001)
         }
 
-        on_destroy_activity.setOnClickListener {
+        binding.onDestroyActivity.setOnClickListener {
             val intent = Intent(this@AActivity, OnDestroyActivity::class.java)
             startActivity(intent)
         }
 
-        show_dialog.setOnClickListener {
+        binding.showDialog.setOnClickListener {
             showMDialog()
         }
 
-        show_activity_dialog.setOnClickListener {
+        binding.showActivityDialog.setOnClickListener {
             val intent = Intent(this@AActivity, DialogActivity::class.java)
             startActivity(intent)
         }

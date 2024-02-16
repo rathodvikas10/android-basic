@@ -105,7 +105,7 @@ open class BaseFragment : Fragment() {
         printLogInternal("onActivityResult")
     }
 
-    override fun onConfigurationChanged(newConfig: Configuration?) {
+    override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         printLogInternal("onConfigurationChanged")
     }

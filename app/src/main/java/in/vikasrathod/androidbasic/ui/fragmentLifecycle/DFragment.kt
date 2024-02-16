@@ -1,12 +1,11 @@
 package `in`.vikasrathod.androidbasic.ui.fragmentLifecycle
 
-import `in`.vikasrathod.androidbasic.R
 import `in`.vikasrathod.androidbasic.ui.common.BaseFragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fargment_transaction.*
+import `in`.vikasrathod.androidbasic.databinding.FargmentTransactionBinding
 
 class DFragment : BaseFragment() {
 
@@ -14,14 +13,18 @@ class DFragment : BaseFragment() {
         setLogTag("__D")
     }
 
+    private var _binding: FargmentTransactionBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        return inflater.inflate(R.layout.fargment_transaction,container,false)
+        _binding = FargmentTransactionBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onStart() {
         super.onStart()
-        fragment_name.text = "D"
+        binding.fragmentName.text = "D"
     }
 
 }

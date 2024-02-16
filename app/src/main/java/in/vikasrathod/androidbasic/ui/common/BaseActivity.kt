@@ -97,7 +97,7 @@ open class BaseActivity : AppCompatActivity() {
         mLastMethodCalled = "onDestroy"
     }
 
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onSaveInstanceState(outState: Bundle) {
         printLogInternal("onSaveInstanceState")
         mLastMethodCalled = "onSaveInstanceState"
         outState?.run {
@@ -106,14 +106,14 @@ open class BaseActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         printLogInternal("onRestoreInstanceState")
         mLastMethodCalled = "onRestoreInstanceState"
-        printLogInternal("lastState : " + savedInstanceState?.getString(STATE_METHOD))
+        printLogInternal("lastState : " + savedInstanceState.getString(STATE_METHOD))
     }
 
-    override fun onConfigurationChanged(newConfig: Configuration?) {
+    override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         printLogInternal("onConfigurationChanged")
         mLastMethodCalled = "onConfigurationChanged"

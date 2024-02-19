@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Android Basic</string>
-    <string name="toast_gravity">Toast Gravity</string>
-    <string name="toast_with_offset">Toast with offset</string>
     <string name="toast">Toast</string>
     <string name="offset_x">offset X</string>
     <string name="offset_y">offset y</string>
@@ -11,4 +9,5 @@
     <string name="top">Top</string>
     <string name="bottom">Bottom</string>
     <string name="title_activity_life_cycle_b">LifeCycleBActivity</string>
+    <string name="image">Image</string>
 </resources>

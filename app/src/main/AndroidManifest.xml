@@ -7,13 +7,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.App.Starting"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".ui.SplashActivity"
-            android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".ui.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -21,57 +20,57 @@
         </activity>
 
         <activity
-            android:name=".ui.common.DialogActivity"
+            android:name=".activity.activityLifecycle.DialogActivity"
             android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:name=".ui.toast.ToastActivity"
+            android:name=".popups.toast.ToastActivity"
             android:label="@string/toast" />
 
         <activity
-            android:name=".ui.activityLifecycle.AActivity"
+            android:name=".activity.activityLifecycle.AActivity"
             android:label="Activity Lifecycle" />
         <activity
-            android:name=".ui.activityLifecycle.BActivity"
+            android:name=".activity.activityLifecycle.BActivity"
             android:label="Activity Lifecycle" />
         <activity
-            android:name=".ui.activityLifecycle.OnDestroyActivity"
+            android:name=".activity.activityLifecycle.OnDestroyActivity"
             android:label="Activity Basic" />
         <activity
-            android:name=".ui.fragmentLifecycle.XMLFragmentActivity"
+            android:name=".fragment.fragmentLifecycle.XMLFragmentActivity"
             android:label="Fragment LifeCycle" />
 
         <activity
-            android:name=".ui.activityLaunchMode.AActivity"
+            android:name=".activity.activityLaunchMode.AActivity"
             android:label="A" />
         <activity
-            android:name=".ui.activityLaunchMode.BActivity"
+            android:name=".activity.activityLaunchMode.BActivity"
             android:label="B" />
         <activity
-            android:name=".ui.activityLaunchMode.CActivity"
+            android:name=".activity.activityLaunchMode.CActivity"
             android:label="C" />
         <activity
-            android:name=".ui.activityLaunchMode.DActivity"
+            android:name=".activity.activityLaunchMode.DActivity"
             android:label="D"
             android:taskAffinity="n.n" />
         <activity
-            android:name=".ui.activityLaunchMode.SingleInstanceActivity"
+            android:name=".activity.activityLaunchMode.SingleInstanceActivity"
             android:label="Single Instance"
             android:launchMode="singleInstance"
             android:taskAffinity="n.n" />
         <activity
-            android:name=".ui.activityLaunchMode.SingleTaskActivity"
+            android:name=".activity.activityLaunchMode.SingleTaskActivity"
             android:label="Single Task"
             android:launchMode="singleTask"
             android:taskAffinity="n.n" />
         <activity
-            android:name=".ui.activityLaunchMode.SingleTopActivity"
+            android:name=".activity.activityLaunchMode.SingleTopActivity"
             android:label="Single Top"
             android:launchMode="singleTop"
             android:taskAffinity="n.n" />
-        <activity android:name=".ui.fragmentLifecycle.FragmentTransactionActivity" />
-        <activity android:name=".ui.notificaction.NotificationActivity" />
+        <activity android:name=".fragment.fragmentLifecycle.FragmentTransactionActivity" />
+        <activity android:name=".notifications.notificaction.NotificationActivity" />
 
-        <receiver android:name=".ui.notificaction.NotificationBroadcastReceiver" />
+        <receiver android:name=".notifications.notificaction.NotificationBroadcastReceiver" />
     </application>
 
 </manifest>
